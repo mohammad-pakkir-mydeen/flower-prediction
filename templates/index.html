@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower prediction</title>
+</head>
+<body>
+    <h1 class="m">flower prediction</h1>
+    <form action="{{url_for('predict')}}" method="post" class="inputs">
+        <p class="text">Enter the sepal length of the flower</p>
+        <input type="text" name="sepal-length" required="required" placeholder="sepal length"><br>
+        <p class="text">Enter the petal length of the flower</p>
+        <input type="text" name="petal-length" required="required" placeholder="petal length"><br>
+        <p class="text">Enter the sepal width of the flower</p>
+        <input type="text" name="sepal-width" required="required" placeholder="sepal width"><br>
+        <p class="text">Enter the petal width of the flower</p>
+        <input type="text" name="petal-width" required="required" placeholder="petal width"><br>
+        <button type="submit" class="button">predict</button>
+    </form>
+    <br><br>
+    <p id="out">{{prediction_test}}</p> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+        .m{
+            text-align: center;
+            font-family: "Stylish",serif;
+            font-size: 80px;
+            font-weight: 600;
+            color: white;
+            
+        }
+        .m:hover{
+            color: black;
+            font-size: 100px;
+            transition: all 1.5s;
+        }
+        body{
+            background-image: url("https://t4.ftcdn.net/jpg/06/41/76/37/360_F_641763756_z2MPck8TcNAQIVhDKwc1IXdHLNPLBlkn.jpg");
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        input{
+            height: 40px;
+            width: 300px;
+            align-items: center;
+            border-radius: 50px;
+            font-size: 25px;
+            text-align: center;
+            color: blue;
+            font-family: "Stylish",serif;
+
+        }
+        input:hover{
+            height: 50px;
+            width: 320px;
+            transition: all 1s;
+        }
+        .text{
+            font-family: "Stylish",serif;
+            font-size: 35px;
+            font-weight: 600;
+        }
+        .text:hover{
+            color:white;
+            font-size: 40px;
+            transition: all 1.5s;
+        }
+        .button{
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border-radius: 29px;
+            background-color: black;
+            color: white;
+            font-size: 40px;
+            font-family: "Stylish",serif;
+            margin-top: 25px;
+
+        }
+        .button:hover{
+            padding: 12px;
+            padding-left: 60px;
+            padding-right: 60px;
+            border-radius: 20px;
+            background-color: white;
+            color:black;
+            font-size: 40px;
+            font-family: "Stylish",serif;
+            transition: all 1s;
+        }
+        #out{
+            color: brown;
+            font-size: 50px;
+            padding: 20px;
+            background-color: beige;
+            font-family: "Stylish",serif;
+            
+            text-align: center;
+        }
+    </style>
+    
+</body>
+</html>
